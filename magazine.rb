@@ -7,4 +7,8 @@ class Magazine
         @category = category
         @@name << self
     end    
+
+    def self.all
+        @@all.dup.freeze
+    end    
 end    
