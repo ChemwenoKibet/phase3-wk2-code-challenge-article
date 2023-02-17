@@ -11,4 +11,8 @@ class Magazine
     def self.all
         @@all.dup.freeze
     end    
+
+    def article_titles
+        Article.all.select {|article| article.magazine == self }.map(&:title)
+    end    
 end    
