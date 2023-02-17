@@ -10,4 +10,18 @@ class Author
         @articles.dup.freeze
     end
     
+    def magazines
+        @articles.map(&:magazine).uniq
+    end
+    
+    def add_article(magazine, title)
+        article = Article.new(self, magazine, title)
+        @articles << article
+        article
+    end
+    
+    def topic_areas
+        magazines.map(&:category).uniq
+    end    
+
 end
