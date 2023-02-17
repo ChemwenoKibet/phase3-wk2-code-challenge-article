@@ -24,5 +24,16 @@ class Magazine
         author_counts.select {|author, count| count > 2 }.keys
     end
     
+    def self.find_by_name(name)
+        @@all.find {|magazine| magazine.name == name }
+    end    
+
+    def name = (name)
+        @name = name
+    end
+    
+    def category=(category)
+        @category = category
+    end    
     
 end    
