@@ -13,5 +13,6 @@ class Article
     def self.all
         @@all.dup.freeze
     end    
-    
+
 end
+

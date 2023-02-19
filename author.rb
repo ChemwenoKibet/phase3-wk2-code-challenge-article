@@ -1,14 +1,15 @@
+require_relative "./article.rb"
 class Author
-    attr_reader :name #attribute to set authors name
+    attr_reader :name, :article #attribute to set authors name
 
     def initialize(name)
         @name = name
-        @articles = [] #empty array to hold articles written by author
+        @article = [] #empty array to hold articles written by author
     end
     
     #returns frozen duplicate to prevent modification
     def articles
-        @articles.dup.freeze 
+        @articles 
     end
     
     #return list of unique magazines that author has wrtten
@@ -29,3 +30,5 @@ class Author
     end    
 
 end
+
+

@@ -1,3 +1,4 @@
+require_relative "./article"
 class Magazine 
     attr_reader :name, :category
     @@all = []
@@ -5,7 +6,7 @@ class Magazine
     def initialize(name, category)
         @name = name
         @category = category
-        @@name << self
+        @@all << self
     end    
 
     #returns a frozen duplicate of an array containing all the Magazine instances.
@@ -30,14 +31,24 @@ class Magazine
     #takes a name argument and returns the magazine instance with that name.
     def self.find_by_name(name)
         @@all.find {|magazine| magazine.name == name }
-    end    
+    end   
+    
+    #this method returns the first magazine object that matches
+    def self.find_by_name(name)
+        Article.all.find { |magazine| magazine.name == name}
+    end
 
-    def name = (name)
+
+
+    def name(name)
         @name = name
     end
     
-    def category=(category)
+    def category(category)
         @category = category
     end    
     
 end    
+
+
+
