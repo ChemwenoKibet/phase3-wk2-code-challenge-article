@@ -9,6 +9,10 @@ class Magazine
         @@all << self
     end    
 
+    def to_s
+        "#{name} (#{category})"
+      end
+
     #returns a frozen duplicate of an array containing all the Magazine instances.
     def self.all  
         @@all.dup.freeze
@@ -40,15 +44,20 @@ class Magazine
 
 
 
-    def name(name)
+    def names(name, category)
         @name = name
+        @category = category
     end
     
-    def category(category)
-        @category = category
-    end    
+       
     
 end    
 
 
+#TESTS
 
+# magazine1 = Magazine.new("National Geographic", "Science")
+# magazine2 = Magazine.new("Vogue", "Fashion")
+
+# puts magazine1
+# puts magazine2

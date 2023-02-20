@@ -2,8 +2,9 @@ require_relative "./article.rb"
 class Author
     attr_reader :name, :article #attribute to set authors name
 
-    def initialize(name)
+    def initialize(name, category)
         @name = name
+        @category = category
         @article = [] #empty array to hold articles written by author
     end
     
@@ -20,8 +21,8 @@ class Author
     #takes mag and article arguments to create new article instances and add it to @articles array
     def add_article(magazine, title)  
         article = Article.new(self, magazine, title)
-        @articles << article
-        article
+        # @articles << article
+        # article
     end
     
     #returns a list of unique categories of magz that author has written
@@ -32,3 +33,12 @@ class Author
 end
 
 
+#TESTS
+
+# author = Author.new("Margs", "science")
+# puts author.name
+# puts au
+# author2 = Author.new("Tazer Black","sports" )
+# puts author2
+
+# p author.add_article("Science", "liko")
