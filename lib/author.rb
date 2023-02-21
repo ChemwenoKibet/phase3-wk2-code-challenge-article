@@ -20,7 +20,8 @@ class Author
     
     #takes mag and article arguments to create new article instances and add it to @articles array
     def add_article(magazine, title)  
-        article = Article.new(self, magazine, title)
+        # article = 
+        Article.new(self, magazine, title)
         # @articles << article
         # article
     end
@@ -35,10 +36,9 @@ end
 
 #TESTS
 
-# author = Author.new("Margs", "science")
+# margs = Author.new("Margs", "science")
 # puts author.name
-# puts au
 # author2 = Author.new("Tazer Black","sports" )
 # puts author2
 
-# p author.add_article("Science", "liko")
+# p margs.add_article("Science", "liko")
