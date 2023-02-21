@@ -12,6 +12,10 @@ class Author
     def articles
         @articles 
     end
+
+    def to_s
+        "#{name} (#{category})"
+    end
     
     #return list of unique magazines that author has wrtten
     def magazines

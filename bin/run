@@ -5,34 +5,52 @@ def reload
     load "config/environment.rb"
 end
 
+# def to_s
+#     "#{name} (#{category})"
+
 
 #TESTS CASES
 
 
 #Author class
-p author = Author.new("Margs", "science")
-p author1 = Author.new('Tazer Black', "sports")
-p author2 = Author.new('David Orneinstein', "fashion")
-p author3 = Author.new('Fabrizio Romano', "crime")
-p author4 = Author.new('Carl Anka', "politics")
+author = Author.new("Margs", "science")
+puts author.name
+author1 = Author.new('Tazer Black', "sports")
+puts author1.name
+author2 = Author.new('David Orneinstein', "fashion")
+puts author2.name
+author3 = Author.new('Fabrizio Romano', "crime")
+puts author3.name
+author4 = Author.new('Carl Anka', "politics")
+puts author4.name
 p author.add_article("Margs", "science")
 
 
 
-# #Magazine class
-p vogue = Magazine.new("Vogue", "Fashion")
-p vanity = Magazine.new('Vanity Fair', 'Politics, business, finance, current events, pop culture, and entertainment.')
-p geo = Magazine.new('National Geographic', 'The World and its Inhabitants')
-p food = Magazine.new('Food Network', 'American Food Culture')
+# Magazine class
+vogue = Magazine.new("Vogue", "Fashion")
+puts vogue
+vanity = Magazine.new('Vanity Fair', 'Politics, business, finance, current events, pop culture, and entertainment.')
+puts vanity 
+geo = Magazine.new('National Geographic', 'The World and its Inhabitants')
+puts geo
+food = Magazine.new('Food Network', 'American Food Culture')
+puts food
 
-# #Article class
-p Margs = Article.new("Margs", "Vogue", "February Edition")
-p new_article = Article.new(author1, vanity, 'Man Utd')
-p new_article1 = Article.new(author2, geo, 'Ten Hag')
-p new_article2 = Article.new(author3, food, 'Sky Sports')
-p new_article3 = Article.new(author3, food, 'Haloween night.')
-p new_article4 = Article.new(author1, vanity, 'Black Panther')
-p new_article5 = Article.new(author4, vanity, 'K-Trap the GOAT')
-
+# # #Article class
+Margs = Article.new("Margs", "Vogue", "February Edition")
+puts Margs
+new_article = Article.new("Tazer Black", vanity, 'Man Utd')
+puts new_article
+new_article1 = Article.new("David Orneinstein", geo, 'Ten Hag')
+puts new_article1
+new_article2 = Article.new("Fabrizio Romano", food, 'Sky Sports')
+puts new_article2
+new_article3 = Article.new("Carl Anka", food, 'Haloween night.')
+puts new_article3
+new_article4 = Article.new("Margs", vanity, 'Black Panther')
+puts new_article4
+new_article5 = Article.new("Fabrizio Romano", vanity, 'K-Trap the GOAT')
+puts new_article5
 
 
